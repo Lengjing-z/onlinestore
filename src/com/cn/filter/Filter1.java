@@ -45,10 +45,7 @@ public class Filter1 implements Filter {
 			chain.doFilter(request, response);//递交给下一个过滤器
             return;
         }
-		if(path.indexOf("/register.jsp")>-1){//注册页面不过滤
-			chain.doFilter(request2, response2);
-            return;
-        }
+		
 		if(user == null) {
 			
 			response2.sendRedirect("login.jsp");
